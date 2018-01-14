@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import { FlatList, TouchableHighlight } from 'react-native';
 import {getServerData} from '../services/requests'
 
-import {parseString} from 'react-native-xml2js'
-
 import Item from '../components/item'
 import { parseOnionData } from '../utils/parsers';
 
@@ -30,11 +28,12 @@ export default class ItemList extends Component {
     }
 
     render() {
+        const { navigate } = this.props.navigation;
         return (
             <FlatList
                 data={this.state.data}
                 renderItem={({ item }) => (
-                    <Item info={item} onItemClick={this.props.onItemClick}></Item>
+                    <Item info={item} onItemClick={() => navigate('Details', {item: item})}></Item>
                 )}
                 keyExtractor={(item, key) => key}
                 onRefresh={this.onRefresh}
