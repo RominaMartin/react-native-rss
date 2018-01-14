@@ -7,18 +7,18 @@ import Detail from './containers/detail'
 export default class App extends Component {
   constructor(props) {
     super(props);
-    this.state = {showDetail: false, detailUrl: ""};
+    this.state = {showDetail: false, item: {}};
     this.showDetail = this.showDetail.bind(this);
   }
 
-  showDetail(url) {
-    this.setState({showDetail: true, detailUrl: url});
+  showDetail(item) {
+    this.setState({showDetail: true, item: item});
   }
 
   render() {
     if(this.state.showDetail) {
       return (
-        <Detail url={this.state.detailUrl}/>
+        <Detail item={this.state.item}/>
       )
     } else {
       return (

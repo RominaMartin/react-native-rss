@@ -34,7 +34,7 @@ export default class ItemList extends Component {
             <FlatList
                 data={this.state.data}
                 renderItem={({ item }) => (
-                    <Item title={item.title} url={item.link} image={item.image} onItemClick={this.props.onItemClick}></Item>
+                    <Item info={item} onItemClick={this.props.onItemClick}></Item>
                 )}
                 keyExtractor={(item, key) => key}
                 onRefresh={this.onRefresh}
