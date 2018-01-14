@@ -9,6 +9,7 @@ This project was bootstrapped with [Create React Native App](https://github.com/
 * [Used dependencies](#used-dependencies)
   * [Parser component](#parser-component)
   * [Navigation component](#navigation-component)
+* [About me](#about-me)
 
 ## Project basics
 This is my very first React Native project!
@@ -66,3 +67,8 @@ const RootNavigator = StackNavigator({
  In this case we are sending information to the next screen, in order to get it you need to access to the navigation prop like this:
 
  `this.props.navigation.state.params.$YOUR_INFO`
+ 
+ 
+ ## About me
+ 
+ Hello, I'm Romina and you can check my personal page [here](https://rominamartin.github.io/)
