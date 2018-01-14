@@ -8,10 +8,6 @@ export default class Detail extends Component {
         this.openInBrowser = this.openInBrowser.bind(this);
     }
 
-    componentDidMount() {
-        console.log(this.props);
-    }
-
     openInBrowser() {
         Linking.canOpenURL(this.state.item.link).then(supported => {
             if (supported)
