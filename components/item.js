@@ -9,9 +9,9 @@ export default class Item extends Component {
     render() {
         return (
             <TouchableHighlight onPress={() => this._onPressButton(this.props.info)} underlayColor="white">
-                <View flexDirection='row' style={{flex: 1}}>
+                <View flexDirection='row' style={{flex: 1, minHeight: 75, backgroundColor: "#fff", padding: 5, borderBottomColor: "#ccc", borderBottomWidth: 1, justifyContent: "center", alignItems: "center"}}>
                     <Image style={{width: 50, height: 50}} source={{uri: this.props.info.image}}/>
-                    <Text style={{width: "100%"}}>{this.props.info.title}</Text>
+                    <Text style={{width: "80%", marginLeft: 5}}>{this.props.info.title}</Text>
                 </View>
             </TouchableHighlight>
         );

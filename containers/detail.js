@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text, Button, Linking, Image } from 'react-native';
+import { ScrollView, Text, Button, Linking, Image } from 'react-native';
 
 export default class Detail extends Component {
     constructor(props) {
@@ -23,16 +23,16 @@ export default class Detail extends Component {
     
     render() {
         return (
-            <View style={{marginTop: 20}}>
+            <ScrollView>
                 <Image style={{width: "100%", height: "50%"}} resizeMode="cover" source={{uri: this.state.item.image}}/>
-                <Text>{this.state.item.title}</Text>
-                <Text>{this.state.item.description}</Text>
+                <Text style={{padding: 10, fontSize: 16, fontWeight: "bold"}}>{this.state.item.title}</Text>
+                <Text style={{marginTop: 5, textAlign: "justify", padding: 10, color: "#333"}}>{this.state.item.description}</Text>
                 <Button
                     onPress={this.openInBrowser}
                     title="Open in browser"
                     color="#333"
                     accessibilityLabel="Open this article in your browser."/>
-            </View>
+            </ScrollView>
         );
     }
 }

@@ -5,6 +5,7 @@ This project was bootstrapped with [Create React Native App](https://github.com/
 ## Table of Contents
 
 * [Project basics](#project-basics)
+  * [You should know](#you-should-know)
 * [Used dependencies](#used-dependencies)
   * [Parser component](#parser-component)
   * [Navigation component](#navigation-component)
@@ -14,9 +15,11 @@ This is my very first React Native project!
 
 This app connects to [The Onion](https://www.theonion.com) RSS feed and displays the latest news.
 
-In order to get going you need to download the code, you can do that via pull, clone or just download the zip what suits you the best. Afterwards run `npm install` to get all the dependencies.
+### You should know
+- In order to get going you need to download the code, you can do that via pull, clone or just download the zip what suits you the best. Afterwards run `npm install` to get all the dependencies. Once you have all the dependencies just run `npm start` and you'll be able to take a look!
 
-Once you have all the dependencies just run `npm start` and you'll be able to take a look!
+- There's a pull to refresh included in the list, try it out!
+
 
 
 ## Used dependencies
