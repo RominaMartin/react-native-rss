@@ -1,22 +1,17 @@
 import React, { Component } from 'react';
-import { StyleSheet, Text, View, TouchableHighlight, Image } from 'react-native';
+import {Text, View, TouchableHighlight, Image } from 'react-native';
 
 export default class Item extends Component {
-    constructor(props) {
-        super(props);
-        // this.selectedItem = this.selectedItem.bind(this);
-    }
-
-    _onPressButton (item) {
-        console.log(item);
+    _onPressButton (url) {
+        this.props.onItemClick(url);
     }
 
     render() {
         return (
-            <TouchableHighlight onPress={() => this._onPressButton(this.props.id)} underlayColor="white">
-                <View flexDirection='row'>
+            <TouchableHighlight onPress={() => this._onPressButton(this.props.url)} underlayColor="white">
+                <View flexDirection='row' style={{flex: 1}}>
                     <Image style={{width: 50, height: 50}} source={{uri: this.props.image}}/>
-                    <Text>{this.props.title}</Text>
+                    <Text style={{width: "100%"}}>{this.props.title}</Text>
                 </View>
             </TouchableHighlight>
         );
