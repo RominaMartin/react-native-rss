@@ -66,6 +66,3 @@ const RootNavigator = StackNavigator({
  In this case we are sending information to the next screen, in order to get it you need to access to the navigation prop like this:
 
  `this.props.navigation.state.params.$YOUR_INFO`
-
- ### SearchBar component
-
